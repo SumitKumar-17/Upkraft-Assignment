@@ -11,28 +11,28 @@ const lessons = [
 
 const UpcomingLessons = () => {
     return (
-        <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className="bg-white p-6 rounded-2xl shadow-sm">
             <div className="flex justify-between items-center mb-4">
-                <h2 className="text-lg font-semibold">Upcoming Lessons</h2>
-                <a href="#" className="text-indigo-600 hover:underline text-sm">View All</a>
+                <h2 className="text-lg font-semibold text-gray-800">Upcoming Lessons</h2>
+                <a href="#" className="text-violet-600 hover:underline text-sm font-medium">View All</a>
             </div>
             <div className="overflow-x-auto">
                 <table className="w-full text-left">
                     <thead>
-                        <tr className="text-gray-500 text-sm">
-                            <th className="py-2 font-normal">Date</th>
-                            <th className="py-2 font-normal">Time</th>
-                            <th className="py-2 font-normal">Course</th>
-                            <th className="py-2 font-normal">Student Name</th>
+                        <tr className="text-gray-400 text-sm border-b">
+                            <th className="py-3 font-medium">Date</th>
+                            <th className="py-3 font-medium">Time</th>
+                            <th className="py-3 font-medium">Course</th>
+                            <th className="py-3 font-medium">Student Name</th>
                         </tr>
                     </thead>
                     <tbody>
                         {lessons.map((lesson, index) => (
-                            <tr key={index} className="border-t">
-                                <td className="py-3">{lesson.date}</td>
-                                <td className="py-3">{lesson.time}</td>
-                                <td className="py-3 font-medium">{lesson.course}</td>
-                                <td className="py-3">{lesson.student}</td>
+                            <tr key={index} className="border-b last:border-none">
+                                <td className="py-4 text-gray-600">{lesson.date}</td>
+                                <td className="py-4 text-gray-600">{lesson.time}</td>
+                                <td className="py-4 font-medium text-gray-800">{lesson.course}</td>
+                                <td className="py-4 text-gray-600">{lesson.student}</td>
                             </tr>
                         ))}
                     </tbody>
